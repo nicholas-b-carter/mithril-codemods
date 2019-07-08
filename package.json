@@ -13,7 +13,9 @@
     "posttest": "npm run lint",
     "preversion": "npm test",
     "version": "changes",
-    "postversion": "git push --follow-tags"
+    "postversion": "git push --follow-tags",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": "tivac/mithril-codemod",
   "keywords": [
@@ -29,7 +31,8 @@
     "jscodeshift": "^0.3.28",
     "meow": "^3.7.0",
     "promise-map-series": "^0.2.3",
-    "to-js-identifier": "^1.0.0"
+    "to-js-identifier": "^1.0.0",
+    "snyk": "^1.192.4"
   },
   "devDependencies": {
     "@studio/changes": "^1.1.0",
@@ -50,5 +53,6 @@
       "newline-per-chained-call": "off",
       "indent": "off"
     }
-  }
+  },
+  "snyk": true
 }
